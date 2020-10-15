@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        body{
+            padding: 100px 0px;
+            display: flex;
+            justify-content: center;
+            background-color: #08080a;
+            font-family: 'Balsamiq Sans', cursive;
+        }
+        h1{
+            text-transform: uppercase;
+            color: #7aa5a3;
+            font-size: 4em;
+            font-family: 'Indie Flower', cursive;
+        }
+        #app{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            margin-top : 50px;
+            padding: 5px 30px;
+        }
+        p{
+            color: #7aa5a3;
+        }
+        button{
+            margin-top: 30px;
+            padding: 15px 50px;
+            border-radius: 35px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background-color: #7aa5a3;
+            font-size: 1.2em;
+            font-family: 'Balsamiq Sans', cursive;
+        }
+        button:hover{
+            background-color: #92b7b5;
+        }
+        .intro{
+            margin-bottom: 3rem;;
+        }
+        .tasks{
+            margin: 0.5rem;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>To do list</h1>
+        <p class="intro">Need to remind you some things to do today ? Take some time to write then.</p>
+        <p class="tasks" v-for="task in tasks">{{ task }}</p>
+        <input type="text" v-model="task" autocomplete="off" />
+        <button @click="tasks.push(task)">Add task</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+
+            data: {
+                task: '',
+                tasks: []
+            }
+        });
+    </script>
+</body>
+</html>
