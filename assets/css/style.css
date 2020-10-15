@@ -1,0 +1,47 @@
+body{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: #08080a;
+    font-family: 'Balsamiq Sans', cursive;
+}
+h1{
+    text-transform: uppercase;
+    color: #7aa5a3;
+    font-size: 4em;
+    font-family: 'Indie Flower', cursive;
+}
+#app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    margin-top : 50px;
+    padding: 5px 30px;
+}
+p{
+    color: #7aa5a3;
+}
+button{
+    margin-top: 30px;
+    padding: 15px 50px;
+    border-radius: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: #7aa5a3;
+    font-size: 1.2em;
+    font-family: 'Balsamiq Sans', cursive;
+}
+button:hover{
+    background-color: #92b7b5;
+}
+.intro{
+    margin-bottom: 3rem;;
+}
+.tasks{
+    margin: 0.5rem;
+    font-size: 2em;
+}
